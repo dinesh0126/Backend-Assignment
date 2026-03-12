@@ -10,10 +10,14 @@ const projectSchema = new mongoose.Schema(
       enum: ["planned", "in_progress", "completed", "archived"],
       default: "planned",
     },
-    owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     tenantId: { type: String, required: true, trim: true },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 projectSchema.index({ owner: 1, tenantId: 1 });
