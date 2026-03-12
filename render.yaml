@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: project-management-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_EXPIRES_IN
+        value: 1d
+      # Set MONGODB_URI and JWT_SECRET in Render dashboard (secret)
