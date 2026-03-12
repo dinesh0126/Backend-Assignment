@@ -25,6 +25,12 @@ app.use(`${API_PREFIX}/tenants`, tenantRoutes);
 app.use(`${API_PREFIX}/auth`, authRoutes);
 app.use(`${API_PREFIX}/projects`, projectRoutes);
 
+app.get("/",(req,res)=>{
+  res.status(200).json({
+    success:true,
+    message:"Server is running"
+  })
+})
 app.use(notFoundHandler);
 app.use(errorHandler);
 
