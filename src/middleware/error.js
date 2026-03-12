@@ -14,10 +14,6 @@ const errorHandler = (err, req, res, next) => {
     payload.details = err.details;
   }
 
-  if (process.env.NODE_ENV !== "production") {
-    payload.stack = err.stack;
-  }
-
   res.status(status).json(payload);
 };
 
