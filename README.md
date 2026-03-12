@@ -17,7 +17,7 @@ Production-ready Node.js + Express REST API with JWT authentication and multi-te
 ## Setup
 1. Install dependencies:
    `npm install`
-2. Create `.env` from `.env.example` and set values.
+2. Create `.env` and set values (only `.env` is used).
 3. Run locally:
    `npm run dev`
 
